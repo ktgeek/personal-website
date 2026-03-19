@@ -15,6 +15,18 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addCollection("tagList", function(collectionApi) {
+    const tagSet = new Set();
+    collectionApi.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => {
+        if (tag !== "all" && tag !== "post") tagSet.add(tag);
+      });
+    });
+    return [...tagSet].sort();
+  });
+
   return {
     dir: {
       input: "src",

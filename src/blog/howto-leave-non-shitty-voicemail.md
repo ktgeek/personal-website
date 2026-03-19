@@ -2,6 +2,11 @@
 title: "HOWTO: Leave non-shitty voicemail"
 date: 2013-01-04
 description: A guide to leaving voicemail that actually gives the recipient a reason to call you back.
+tags:
+  - bitching
+  - howto
+  - rules
+  - voicemail
 ---
 
 I've been receiving a fair amount of voicemail at work from sales jagbags that are of the form "Hey, this is Jagbag from JB Inc, I've got a couple of questions for you, so if you could call me back at 555-DICKBAG, I'd appreciate it." I will never return this call. It's not that it's from a sales guy or that it's a cold call, although that adds to the likelihood that I'll delete it with prejudice. It's the vague "I have a few questions for you." Give me some specifics for a reason to call you.

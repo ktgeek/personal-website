@@ -24,6 +24,15 @@ tags: []
           {% if post.data.description %}
             <p class="text-sm text-gray-600">{{ post.data.description }}</p>
           {% endif %}
+          {% set userTags = post.data.tags | reject("equalto", "post") | list %}
+          {% if userTags | length %}
+            <div class="flex flex-wrap gap-2 mt-2">
+              {% for tag in userTags %}
+                <a href="/blog/tags/{{ tag | slug }}/"
+                   class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-200 transition-colors">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
         </article>
       </li>
     {% endfor %}
