@@ -1,4 +1,7 @@
+const { HtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Date filters for blog posts
@@ -28,6 +31,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
       input: "src",
       output: "_site",
