@@ -1,0 +1,97 @@
+[
+  {
+    "company": "SUBSCRIBE",
+    "url": "https://www.subscribe.com",
+    "role": "Director of Engineering",
+    "dates": "October 2025 – Present",
+    "description": "Enabling the digital transformation of alternative investments with the leading operating system for alternative product transactions.",
+    "highlights": []
+  },
+  {
+    "company": "Instructure",
+    "url": "https://www.instructure.com",
+    "role": "Principal Engineer Manager",
+    "dates": "January 2025 – October 2025",
+    "description": "Continued Principal Engineer responsibilities while also creating and managing a new Growth Engineering team in the Canvas organization.",
+    "highlights": []
+  },
+  {
+    "company": "Instructure",
+    "url": "https://www.instructure.com",
+    "role": "Principal Engineer",
+    "dates": "November 2023 – January 2025",
+    "description": "Provided cross-team technical leadership, architectural guidance, and hands-on development across Canvas products.",
+    "highlights": [
+      "Primary engineer for high-priority customer issues, focused on securing sales and retaining customers",
+      "Technical lead on a company-wide customer load testing initiative",
+      "Key author of the engineering onboarding process for a globalization initiative in Budapest"
+    ]
+  },
+  {
+    "company": "Instructure",
+    "url": "https://www.instructure.com",
+    "role": "Engineering Director",
+    "dates": "March 2021 – November 2023",
+    "description": "Led five Canvas/edu teams totaling 42 engineers dispersed across the US, Latin America, and Hungary, including one contractor team built from scratch.",
+    "highlights": [
+      "Refined bi-annual employee assessments, resulting in a more precise process and improved feedback",
+      "Oversaw intern recruitment, achieving a 70% intern-to-FTE conversion rate",
+      "Guided engineering managers to a 90% quarterly delivery rate on committed projects"
+    ]
+  },
+  {
+    "company": "Instructure",
+    "url": "https://www.instructure.com",
+    "role": "Engineering Manager, Canvas",
+    "dates": "September 2018 – March 2021",
+    "description": "Provided leadership, recruitment, mentoring, and ownership for four Canvas feature teams with six direct and twelve indirect reports each.",
+    "highlights": []
+  },
+  {
+    "company": "Instructure",
+    "url": "https://www.instructure.com",
+    "role": "Team Lead, Engineering",
+    "dates": "September 2015 – September 2018",
+    "description": "Led the Gradebook team for the Canvas LMS — nine engineers across Chicago, SLC, remote, interns, and contractors. Tech: Ruby, Rails, JavaScript, React, Redis, Cassandra.",
+    "highlights": [
+      "Reduced open bug count from 50 to under 5 and maintained it there",
+      "Delivered major gradebook rewrite ahead of the annual company conference",
+      "Increased team velocity by 35% through weekly metrics and targeted one-on-ones"
+    ]
+  },
+  {
+    "company": "National Association of REALTORS®",
+    "url": "https://www.nar.realtor",
+    "role": "Vice President, Information Technology Services",
+    "dates": "October 2008 – May 2015",
+    "description": "Ran the IT department with a $6M budget and 25 staff in Chicago and Washington, DC. Scope: desktop support, infrastructure, and application development for 300+ employees across 400 virtual servers (70% Linux).",
+    "highlights": [
+      "Rebuilt the e-commerce payment gateway end-to-end; in production and passing Level 1 PCI audits in 6 weeks",
+      "Migrated 300 employees from Lotus Notes/Domino to Exchange in 4 weeks",
+      "End-to-end implementation of open-source mailing list solution (Sympa) integrated with Oracle and Active Directory"
+    ]
+  },
+  {
+    "company": "National Association of REALTORS®",
+    "url": "https://www.nar.realtor",
+    "role": "Managing Director, Center for REALTOR® Technology",
+    "dates": "September 2006 – October 2008",
+    "description": "Managed a $2M department of 5 responsible for technology advocacy, education, and implementation for the entire NAR membership.",
+    "highlights": [
+      "Brought technology survey development in-house, improving quality and saving $50,000/year",
+      "Created the \"Bloggers' Lounge\" at NAR conferences — NAR's first organized social media outreach"
+    ]
+  },
+  {
+    "company": "National Association of REALTORS®",
+    "url": "https://www.nar.realtor",
+    "role": "Strategic Architect, Center for REALTOR® Technology",
+    "dates": "August 2001 – September 2006",
+    "description": "Founding member of a skunk-works department building open-source real estate technology and educating REALTORS® at local, state, and national meetings.",
+    "highlights": [
+      "Lead developer on ezRETS, a cross-platform open-source ODBC driver for RETS data (Windows, Linux, macOS)",
+      "Core developer on libRETS, a multi-language RETS library (Ruby, PHP, .NET bindings)",
+      "Launched NAR's first blog (CRT blog, August 2005) — NAR's pioneering entry into social media"
+    ]
+  }
+]

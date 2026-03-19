@@ -1,0 +1,26 @@
+[
+  {
+    "name": "supreSSHion",
+    "description": "macOS menubar agent that listens for screen lock and sleep events and unloads SSH keys from memory to keep them safe.",
+    "url": "https://github.com/ktgeek/supreSSHion",
+    "tech": ["Swift", "macOS"]
+  },
+  {
+    "name": "bluld",
+    "description": "A small Linux daemon using the user-space LED driver to expose Blinkstick LEDs via /sys/class/leds.",
+    "url": "https://github.com/ktgeek/bluld",
+    "tech": ["C++", "Linux"]
+  },
+  {
+    "name": "mac-zoom-status-mqtt",
+    "description": "Watches the active Zoom meeting process on a Mac and publishes meeting status to MQTT for home automation use.",
+    "url": "https://github.com/ktgeek/mac-zoom-status-mqtt",
+    "tech": ["Ruby", "MQTT", "macOS"]
+  },
+  {
+    "name": "openhab-stuff",
+    "description": "openHAB configurations, rules, and HOWTOs for a home automation setup.",
+    "url": "https://github.com/ktgeek/openhab-stuff",
+    "tech": ["Ruby", "openHAB"]
+  }
+]

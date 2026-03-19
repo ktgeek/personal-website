@@ -1,0 +1,16 @@
+{
+  "name": "11ty-take-3",
+  "version": "1.0.0",
+  "description": "Personal website built with Eleventy and Tailwind CSS",
+  "scripts": {
+    "start": "concurrently \"npx @11ty/eleventy --serve\" \"npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css --watch\"",
+    "build": "npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css && npx @11ty/eleventy",
+    "clean": "rm -rf _site"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "concurrently": "^9.0.0",
+    "tailwindcss": "^3.4.0"
+  }
+}

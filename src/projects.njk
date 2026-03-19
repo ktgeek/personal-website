@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Projects
+description: Side projects and open-source work
+---
+
+<h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-10">Projects</h1>
+
+<div class="grid sm:grid-cols-2 gap-5">
+  {% for project in projects %}
+    <div class="border border-gray-200 rounded-lg p-5 flex flex-col">
+      <div class="flex-1">
+        <h2 class="font-semibold text-gray-900 mb-2">
+          {% if project.url %}
+            <a href="{{ project.url }}" class="hover:underline" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+          {% else %}
+            {{ project.name }}
+          {% endif %}
+        </h2>
+        <p class="text-sm text-gray-600 mb-4">{{ project.description }}</p>
+      </div>
+      {% if project.tech %}
+        <div class="flex flex-wrap gap-1.5">
+          {% for tag in project.tech %}
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

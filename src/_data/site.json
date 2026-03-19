@@ -1,0 +1,18 @@
+{
+  "name": "Keith T. Garner",
+  "tagline": "Software engineer & maker of things",
+  "description": "Personal website of Keith T. Garner — engineering leader and software craftsman",
+  "url": "https://kgarner.com",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Work", "url": "/work/" },
+    { "label": "Projects", "url": "/projects/" },
+    { "label": "Blog", "url": "/blog/" }
+  ],
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/ktgeek" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/keithgarner/" },
+    { "label": "Email", "url": "mailto:kgarner@kgarner.com" }
+  ]
+}
