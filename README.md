@@ -20,6 +20,7 @@ PATH_PREFIX=/testing/mysite/ npm run build
 ```
 
 All internal links in the generated HTML will be rewritten to be relative to that prefix.
+`PATH_PREFIX` also affects the `Disallow` paths in `robots.txt` and the `Sitemap:` URL.
 Leave `PATH_PREFIX` unset (or set it to `/`) for a root deployment.
 
 ## Adding content
