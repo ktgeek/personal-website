@@ -1,9 +1,19 @@
 const { HtmlBasePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
 
 module.exports = function(eleventyConfig) {
+  const pathPrefix = process.env.PATH_PREFIX || "/";
+
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(EleventyPluginRobotsTxt, {
+    shouldBlockAIRobots: true,
+    rules: new Map([
+      [["AhrefsBot", "SemrushBot", "DotBot", "MJ12bot", "DataForSeoBot"], [{ disallow: `${pathPrefix}` }]],
+      ["*", [{ disallow: `${pathPrefix}quotes/` }]],
+    ]),
+  });
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Date filters for blog posts
