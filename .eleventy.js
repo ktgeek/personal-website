@@ -1,6 +1,7 @@
 const { HtmlBasePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
+const siteData = require("./src/_data/site.json");
 
 module.exports = function(eleventyConfig) {
   const pathPrefix = process.env.PATH_PREFIX || "/";
@@ -9,6 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyPluginRobotsTxt, {
     shouldBlockAIRobots: true,
+    sitemapURL: `${siteData.url}${pathPrefix}sitemap.xml`,
     rules: new Map([
       [["AhrefsBot", "SemrushBot", "DotBot", "MJ12bot", "DataForSeoBot"], [{ disallow: `${pathPrefix}` }]],
       ["*", [{ disallow: `${pathPrefix}quotes/` }]],
