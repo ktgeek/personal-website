@@ -1,7 +1,7 @@
 ---
 title: Hello, world... again
 date: 2026-03-21
-description: First post — setting up this site and what I plan to write about.
+description: Relaunching my personal site after years of neglect.
 ---
 
 My previous personal webpage was written in 1998 as a bunch of `<UL>` and `<LI>` and then... never really changed.
