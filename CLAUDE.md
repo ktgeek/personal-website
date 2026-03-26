@@ -46,3 +46,9 @@ Tailwind CLI processes `main.css` → `output.css`. Eleventy passthrough-copies
 - **Work entry**: add an object to `src/_data/work.json`
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`
+
+## Maintenance
+
+Keep this file up-to-date as the project evolves. When making changes that affect
+project structure, commands, or conventions described here, update the relevant
+sections of this file in the same commit/session.
