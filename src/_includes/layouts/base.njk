@@ -13,12 +13,22 @@
   <!-- Nav -->
   <header class="border-b border-gray-200">
     <nav class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="/" class="font-semibold text-lg tracking-tight hover:text-gray-600 transition-colors">
-        {{ site.name }}
-      </a>
+      <div class="flex items-center gap-1.5 font-semibold text-lg tracking-tight min-w-0 overflow-hidden mr-8">
+        <a href="/" class="shrink-0 hover:text-gray-600 transition-colors">{{ site.name }}</a>
+        {% if page.url != "/" %}
+          <span class="shrink-0 text-gray-400 font-normal">/</span>
+          {% if breadcrumbParent %}
+            <a href="{{ breadcrumbParent.url }}" class="shrink-0 text-gray-500 hover:text-gray-700 transition-colors">{{ breadcrumbParent.label }}</a>
+            <span class="hidden sm:inline shrink-0 text-gray-400 font-normal">/</span>
+            <span class="hidden sm:inline text-gray-900 truncate">{{ title }}</span>
+          {% else %}
+            <span class="shrink-0 text-gray-900">{{ title }}</span>
+          {% endif %}
+        {% endif %}
+      </div>
 
       <!-- Desktop nav -->
-      <ul class="hidden sm:flex items-center gap-6 text-sm font-medium">
+      <ul class="hidden sm:flex shrink-0 items-center gap-6 text-sm font-medium">
         {% for link in site.nav %}
           {% if link.url !== "/" %}
             <li>
