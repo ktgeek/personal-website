@@ -4,25 +4,25 @@ title: Projects
 description: Side projects and open-source work
 ---
 
-<h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-10">Projects</h1>
+<h1 class="font-pixel text-sm text-arcade-yellow glow-yellow mb-10 leading-loose">Projects</h1>
 
 <div class="grid sm:grid-cols-2 gap-5">
   {% for project in projects %}
-    <div class="border border-gray-200 rounded-lg p-5 flex flex-col">
+    <div class="pixel-box bg-arcade-surface p-5 flex flex-col hover:border-arcade-cyan transition-all">
       <div class="flex-1">
-        <h2 class="font-semibold text-gray-900 mb-2">
+        <h2 class="font-pixel text-[10px] text-arcade-cyan mb-3 leading-loose">
           {% if project.url %}
-            <a href="{{ project.url }}" class="hover:underline" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+            <a href="{{ project.url }}" class="hover:text-arcade-yellow hover:glow-yellow transition-colors" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
           {% else %}
             {{ project.name }}
           {% endif %}
         </h2>
-        <p class="text-sm text-gray-600 mb-4">{{ project.description }}</p>
+        <p class="text-xs text-arcade-dim mb-4 leading-relaxed">{{ project.description }}</p>
       </div>
       {% if project.tech %}
         <div class="flex flex-wrap gap-1.5">
           {% for tag in project.tech %}
-            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ tag }}</span>
+            <span class="font-pixel text-[8px] border border-arcade-magenta text-arcade-magenta px-2 py-1 leading-none">{{ tag }}</span>
           {% endfor %}
         </div>
       {% endif %}

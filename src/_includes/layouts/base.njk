@@ -5,35 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
   <link rel="stylesheet" href="/assets/css/output.css" />
   <link rel="stylesheet" href="/assets/css/prism-tomorrow.css" />
 </head>
-<body class="h-full flex flex-col bg-white text-gray-900 font-sans">
+<body class="h-full flex flex-col bg-arcade-bg text-arcade-dim font-mono">
 
   <!-- Nav -->
-  <header class="border-b border-gray-200">
+  <header class="bg-arcade-surface border-b-2 border-arcade-yellow">
     <nav class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-1.5 font-semibold text-lg tracking-tight min-w-0 overflow-hidden mr-8">
-        <a href="/" class="shrink-0 hover:text-gray-600 transition-colors">{{ site.name }}</a>
+      <div class="flex items-center gap-1.5 font-pixel text-xs min-w-0 overflow-hidden mr-8">
+        <a href="/" class="shrink-0 text-arcade-yellow cursor-blink glow-yellow hover:text-white transition-colors">{{ site.name }}</a>
         {% if page.url != "/" %}
-          <span class="shrink-0 text-gray-400 font-normal">/</span>
+          <span class="shrink-0 text-arcade-magenta font-normal">/</span>
           {% if breadcrumbParent %}
-            <a href="{{ breadcrumbParent.url }}" class="shrink-0 text-gray-500 hover:text-gray-700 transition-colors">{{ breadcrumbParent.label }}</a>
-            <span class="hidden sm:inline shrink-0 text-gray-400 font-normal">/</span>
-            <span class="hidden sm:inline text-gray-900 truncate">{{ title }}</span>
+            <a href="{{ breadcrumbParent.url }}" class="shrink-0 text-arcade-green hover:text-arcade-yellow transition-colors">{{ breadcrumbParent.label }}</a>
+            <span class="hidden sm:inline shrink-0 text-arcade-magenta font-normal">/</span>
+            <span class="hidden sm:inline text-arcade-cyan truncate">{{ title }}</span>
           {% else %}
-            <span class="shrink-0 text-gray-900">{{ title }}</span>
+            <span class="shrink-0 text-arcade-cyan">{{ title }}</span>
           {% endif %}
         {% endif %}
       </div>
 
       <!-- Desktop nav -->
-      <ul class="hidden sm:flex shrink-0 items-center gap-6 text-sm font-medium">
+      <ul class="hidden sm:flex shrink-0 items-center gap-6 font-pixel text-[10px]">
         {% for link in site.nav %}
           {% if link.url !== "/" %}
             <li>
               <a href="{{ link.url }}"
-                 class="{% if page.url == link.url %}text-gray-900 border-b border-gray-900{% else %}text-gray-500 hover:text-gray-900{% endif %} transition-colors pb-0.5">
+                 class="{% if page.url == link.url %}text-arcade-yellow border-b-2 border-arcade-yellow glow-yellow{% else %}text-arcade-dim hover:text-arcade-yellow{% endif %} transition-colors pb-0.5 leading-loose">
                 {{ link.label }}
               </a>
             </li>
@@ -42,7 +45,7 @@
       </ul>
 
       <!-- Mobile hamburger -->
-      <button id="menu-btn" class="sm:hidden p-2 rounded text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+      <button id="menu-btn" class="sm:hidden p-2 text-arcade-yellow hover:text-white hover:bg-arcade-border transition-colors" aria-label="Toggle menu">
         <svg id="icon-open" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -53,13 +56,13 @@
     </nav>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-100">
-      <ul class="max-w-3xl mx-auto px-4 py-3 flex flex-col gap-1">
+    <div id="mobile-menu" class="hidden sm:hidden border-t-2 border-arcade-yellow bg-arcade-surface">
+      <ul class="max-w-3xl mx-auto px-4 py-3 flex flex-col gap-1 font-pixel text-[10px]">
         {% for link in site.nav %}
           {% if link.url !== "/" %}
             <li>
               <a href="{{ link.url }}"
-                 class="block py-2 px-2 rounded text-sm font-medium {% if page.url == link.url %}text-gray-900 bg-gray-50{% else %}text-gray-600 hover:text-gray-900 hover:bg-gray-50{% endif %} transition-colors">
+                 class="block py-2 px-2 leading-loose {% if page.url == link.url %}text-arcade-yellow bg-arcade-border{% else %}text-arcade-dim hover:text-arcade-yellow hover:bg-arcade-border{% endif %} transition-colors">
                 {{ link.label }}
               </a>
             </li>
@@ -75,13 +78,13 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200">
-    <div class="max-w-3xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500">
+  <footer class="border-t-2 border-arcade-border">
+    <div class="max-w-3xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 font-pixel text-[9px] text-arcade-dim leading-loose">
       <p>© {{ site.name }}</p>
       <ul class="flex items-center gap-4">
         {% for link in site.social %}
           <li>
-            <a href="{{ link.url }}" class="hover:text-gray-900 transition-colors" target="_blank" rel="noopener noreferrer">
+            <a href="{{ link.url }}" class="hover:text-arcade-yellow transition-colors" target="_blank" rel="noopener noreferrer">
               {{ link.label }}
             </a>
           </li>

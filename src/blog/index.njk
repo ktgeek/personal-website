@@ -6,31 +6,31 @@ tags: []
 eleventyExcludeFromCollections: true
 ---
 
-<h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-10">Blog</h1>
+<h1 class="font-pixel text-sm text-arcade-yellow glow-yellow mb-10 leading-loose">Blog</h1>
 
 {% set posts = collections.post | reverse %}
 {% if posts.length %}
   <ul class="space-y-8">
     {% for post in posts %}
-      <li>
+      <li class="border-l-2 border-arcade-border pl-6 hover:border-arcade-cyan transition-colors">
         <article>
           <a href="{{ post.url }}" class="group block">
-            <h2 class="text-lg font-semibold text-gray-900 group-hover:underline mb-1">
+            <h2 class="font-pixel text-[10px] text-arcade-cyan group-hover:text-arcade-yellow group-hover:glow-yellow transition-colors mb-3 leading-loose">
               {{ post.data.title }}
             </h2>
           </a>
-          <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+          <div class="flex items-center gap-2 font-pixel text-[9px] text-arcade-dim mb-2 leading-loose">
             <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
           </div>
           {% if post.data.description %}
-            <p class="text-sm text-gray-600">{{ post.data.description }}</p>
+            <p class="text-xs text-arcade-dim mb-2 leading-relaxed">{{ post.data.description }}</p>
           {% endif %}
           {% set userTags = post.data.tags | reject("equalto", "post") | list %}
           {% if userTags | length %}
             <div class="flex flex-wrap gap-2 mt-2">
               {% for tag in userTags %}
                 <a href="/blog/tags/{{ tag | slug }}/"
-                   class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-200 transition-colors">{{ tag }}</a>
+                   class="font-pixel text-[8px] border border-arcade-magenta text-arcade-magenta px-2 py-1 hover:bg-arcade-magenta hover:text-arcade-bg transition-colors leading-none">{{ tag }}</a>
               {% endfor %}
             </div>
           {% endif %}
@@ -39,5 +39,5 @@ eleventyExcludeFromCollections: true
     {% endfor %}
   </ul>
 {% else %}
-  <p class="text-gray-500">No posts yet. Check back soon.</p>
+  <p class="font-pixel text-[10px] text-arcade-dim leading-loose">No posts yet. Check back soon.</p>
 {% endif %}

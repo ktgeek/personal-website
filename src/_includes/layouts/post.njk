@@ -7,14 +7,14 @@ breadcrumbParent:
 
 <article>
   <header class="mb-10">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-3">{{ title }}</h1>
-    <div class="flex items-center gap-3 text-sm text-gray-500">
+    <h1 class="font-pixel text-xs text-arcade-yellow glow-yellow mb-4 leading-loose">{{ title }}</h1>
+    <div class="flex items-center gap-3 font-pixel text-[9px] text-arcade-dim leading-loose">
       <time datetime="{{ date | htmlDateString }}">
         {{ date | readableDate }}
       </time>
       {% if description %}
-        <span>·</span>
-        <span>{{ description }}</span>
+        <span>|</span>
+        <span class="text-arcade-dim">{{ description }}</span>
       {% endif %}
     </div>
     {% set userTags = tags | reject("equalto", "post") | list %}
@@ -22,21 +22,22 @@ breadcrumbParent:
       <div class="flex flex-wrap gap-2 mt-3">
         {% for tag in userTags %}
           <a href="/blog/tags/{{ tag | slug }}/"
-             class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-200 transition-colors">{{ tag }}</a>
+             class="font-pixel text-[8px] border border-arcade-magenta text-arcade-magenta px-2 py-1 hover:bg-arcade-magenta hover:text-arcade-bg transition-colors leading-none">{{ tag }}</a>
         {% endfor %}
       </div>
     {% endif %}
   </header>
 
-  <div class="prose prose-gray max-w-none
-    prose-headings:font-semibold prose-headings:tracking-tight
-    prose-a:text-gray-900 prose-a:underline prose-a:underline-offset-2
-    prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono
+  <div class="prose prose-arcade max-w-none
+    prose-headings:font-pixel prose-headings:text-[10px] prose-headings:leading-loose prose-headings:mt-8 prose-headings:mb-4
+    prose-a:text-arcade-green prose-a:no-underline hover:prose-a:text-arcade-yellow
+    prose-strong:text-arcade-yellow
+    prose-code:text-arcade-yellow prose-code:bg-arcade-surface prose-code:px-1 prose-code:py-0.5 prose-code:font-mono prose-code:text-sm
     [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit">
     {{ content | safe }}
   </div>
 
-  <div class="mt-12 pt-6 border-t border-gray-200">
-    <a href="/blog/" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">← All posts</a>
+  <div class="mt-12 pt-6 border-t-2 border-arcade-border">
+    <a href="/blog/" class="font-pixel text-[9px] text-arcade-green hover:text-arcade-yellow transition-colors">&lt; All posts</a>
   </div>
 </article>
