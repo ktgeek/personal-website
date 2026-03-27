@@ -1,6 +1,7 @@
 const { HtmlBasePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
+const { rssPlugin } = require("@11ty/eleventy-plugin-rss");
 const siteData = require("./src/_data/site.json");
 
 module.exports = function(eleventyConfig) {
@@ -8,6 +9,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(EleventyPluginRobotsTxt, {
     shouldBlockAIRobots: true,
     sitemapURL: `${siteData.url}${pathPrefix}sitemap.xml`,

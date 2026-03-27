@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
   <link rel="stylesheet" href="/assets/css/output.css" />
   <link rel="stylesheet" href="/assets/css/prism-tomorrow.css" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Blog" href="/feed.xml" />
 </head>
 <body class="h-full flex flex-col bg-arcade-bg text-arcade-dim font-mono">
 
@@ -89,6 +90,9 @@
             </a>
           </li>
         {% endfor %}
+        <li>
+          <a href="/feed.xml" class="hover:text-arcade-yellow transition-colors">RSS</a>
+        </li>
       </ul>
     </div>
   </footer>
