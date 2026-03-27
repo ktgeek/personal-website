@@ -17,6 +17,7 @@ module.exports = {
           cyan:    '#00f5ff',
           magenta: '#ff00ff',
           dim:     '#8888aa',
+          text:    '#c8c8dc',
         }
       },
       fontFamily: {
@@ -26,9 +27,9 @@ module.exports = {
       typography: (theme) => ({
         arcade: {
           css: {
-            '--tw-prose-body':          theme('colors.arcade.dim'),
+            '--tw-prose-body':          theme('colors.arcade.text'),
             '--tw-prose-headings':      theme('colors.arcade.cyan'),
-            '--tw-prose-lead':          theme('colors.arcade.dim'),
+            '--tw-prose-lead':          theme('colors.arcade.text'),
             '--tw-prose-links':         theme('colors.arcade.green'),
             '--tw-prose-bold':          theme('colors.arcade.yellow'),
             '--tw-prose-counters':      theme('colors.arcade.dim'),
