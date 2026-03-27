@@ -15,12 +15,88 @@ title: Home
       </p>
     </div>
     <div class="shrink-0 flex justify-center">
-      <img src="/assets/images/keith.jpg"
-           alt="Keith T. Garner"
-           class="w-40 h-40 object-cover pixel-box-yellow">
+      <div class="relative w-40 h-40 pixel-box-yellow cursor-pointer select-none" id="profile-wrapper" title="Click for pixel mode">
+        <img src="/assets/images/keith.jpg"
+             id="profile-img"
+             alt="Keith T. Garner"
+             class="w-full h-full object-cover transition-opacity duration-200"
+             crossorigin="anonymous">
+        <canvas id="pixel-canvas"
+                class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-200"
+                style="image-rendering: pixelated; image-rendering: crisp-edges;"></canvas>
+        <div id="pixel-label" class="absolute bottom-0 left-0 right-0 flex justify-center pb-1 opacity-0 transition-opacity duration-200 pointer-events-none">
+          <span class="font-pixel text-[6px] text-arcade-yellow bg-arcade-bg px-1 glow-yellow">PIXEL MODE</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  const wrapper = document.getElementById('profile-wrapper');
+  const img     = document.getElementById('profile-img');
+  const canvas  = document.getElementById('pixel-canvas');
+  const label   = document.getElementById('pixel-label');
+  if (!wrapper || !img || !canvas || !label) return;
+
+  const ctx = canvas.getContext('2d');
+  //const PIXELS = 20; // grid size — lower = chunkier
+  const PIXELS = 40; // grid size — lower = chunkier
+  let locked = false;
+  let rendered = false;
+
+  function renderPixels() {
+    if (rendered) return;
+    const w = img.offsetWidth;
+    const h = img.offsetHeight;
+    canvas.width  = w;
+    canvas.height = h;
+
+    // crop to center square (matching object-cover behaviour)
+    const nw = img.naturalWidth;
+    const nh = img.naturalHeight;
+    const aspect = w / h;
+    let sx, sy, sw, sh;
+    if (nw / nh > aspect) {
+      sh = nh; sw = nh * aspect;
+      sx = (nw - sw) / 2; sy = 0;
+    } else {
+      sw = nw; sh = nw / aspect;
+      sx = 0; sy = (nh - sh) / 2;
+    }
+
+    const off = document.createElement('canvas');
+    off.width = PIXELS; off.height = PIXELS;
+    const offCtx = off.getContext('2d');
+    offCtx.drawImage(img, sx, sy, sw, sh, 0, 0, PIXELS, PIXELS);
+
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(off, 0, 0, PIXELS, PIXELS, 0, 0, w, h);
+    rendered = true;
+  }
+
+  function showPixels() {
+    renderPixels();
+    canvas.style.opacity = '1';
+    label.style.opacity  = '1';
+    img.style.opacity    = '0';
+  }
+
+  function hidePixels() {
+    canvas.style.opacity = '0';
+    label.style.opacity  = '0';
+    img.style.opacity    = '1';
+  }
+
+  wrapper.addEventListener('mouseenter', showPixels);
+  wrapper.addEventListener('mouseleave', () => { if (!locked) hidePixels(); });
+  wrapper.addEventListener('click', () => {
+    locked = !locked;
+    locked ? showPixels() : hidePixels();
+  });
+})();
+</script>
 
 <!-- Section cards -->
 <section>
