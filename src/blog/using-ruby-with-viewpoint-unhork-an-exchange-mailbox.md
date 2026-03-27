@@ -5,6 +5,7 @@ description: How I used the Viewpoint Ruby gem and Exchange Web Services to batc
 tags:
   - ruby
   - exchange
+  - coding
 ---
 
 _(It's been awhile since I've done a technical post, so I may do that on the next few.)_

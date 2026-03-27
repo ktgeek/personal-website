@@ -6,6 +6,7 @@ tags:
   - ruby
   - ffi
   - mp4
+  - coding
 ---
 
 Previously on the blog, I automated chapter insertion around commercials but had to call out to a small C++ application to add chapters using libmp4v2.
