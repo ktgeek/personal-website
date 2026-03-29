@@ -1,15 +1,15 @@
 [
   {
     "name": "supreSSHion",
-    "description": "macOS menubar agent that listens for screen lock and sleep events and unloads SSH keys from memory to keep them safe.",
+    "description": "macOS menubar agent that listens for screen lock and sleep events and unloads SSH keys from memory.",
     "url": "https://github.com/ktgeek/supreSSHion",
-    "tech": ["Swift", "macOS"]
+    "tech": ["Swift", "ObjC", "macOS"]
   },
   {
     "name": "bluld",
     "description": "A small Linux daemon using the user-space LED driver to expose Blinkstick LEDs via /sys/class/leds.",
     "url": "https://github.com/ktgeek/bluld",
-    "tech": ["C++", "Linux"]
+    "tech": ["C++", "Linux", "openwrt", "led"]
   },
   {
     "name": "mac-zoom-status-mqtt",
@@ -19,8 +19,14 @@
   },
   {
     "name": "openhab-stuff",
-    "description": "openHAB configurations, rules, and HOWTOs for a home automation setup.",
+    "description": "openHAB configurations, rules, and HOWTOs for my home automation setup.",
     "url": "https://github.com/ktgeek/openhab-stuff",
     "tech": ["Ruby", "openHAB"]
+  },
+  {
+    "name": "tivo2podcast",
+    "description": "(Archived) pipeline scripts to download shows from my TiVo, transcode them, and put them in a podcast feed for easy downloading (for personal use only.)",
+    "url": "https://github.com/ktgeek/tivo2podcast",
+    "tech": ["Ruby", "TiVo", "handbrake", "comskip", "RSS"]
   }
 ]
