@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ginfuru.better-nunjucks",
+    "shd101wyy.markdown-preview-enhanced",
+    "DavidAnson.vscode-markdownlint",
+    "eseom.nunjucks-template",
+  ]
+}
