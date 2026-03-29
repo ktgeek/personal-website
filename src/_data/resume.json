@@ -1,137 +1,147 @@
-[
-  {
-    "company": "SUBSCRIBE",
-    "url": "https://www.subscribe.com",
-    "role": "Director of Software Engineering",
-    "dates": "October 2025 – March 2026",
-    "description": "Led a distributed engineering organization of 60+ engineers across 10 teams spread across the US, LATAM, and Europe. Coached and developed 10 team leads, including successfully turning around two underperforming leads and establishing clear growth paths.",
-    "highlights": [
-      "Redesigned the engineering interview process to improve candidate evaluation consistency and quality",
-      "Partnered with the CISO and led a two-engineer working group to evaluate and implement Snyk, serving as the primary technical driver in strengthening the organization's security posture",
-      "Collaborated with a peer Director of Engineering to align on technical vision and overall department direction"
-    ]
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Principal Engineering Manager",
-    "dates": "January 2025 – September 2025",
-    "description": "Founded and led the Growth Engineering team, assembled from existing Canvas engineers to drive revenue-focused initiatives. Team was subsequently tasked with a high-priority security remediation effort, delivering critical fixes across the Canvas codebase.",
-    "highlights": [
-      "Coordinated cross-functionally with service-owning engineering teams and the Customer Success organization to communicate upcoming API changes, ensuring alignment across technical and customer-facing stakeholders"
-    ]
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Principal Engineer",
-    "dates": "December 2023 – January 2025",
-    "description": "Operated as a trusted technical resource within the Canvas organization, sought out for complex cross-team projects, architectural guidance, and high-stakes customer escalations requiring deep product knowledge and creative problem solving.",
-    "highlights": [
-      "Designated technical resource for high-priority customer escalations with the goal of securing new sales or retaining at-risk accounts",
-      "Technical Lead and Engineering Representative on a customer load testing initiative, contributing to the successful landing of a new client",
-      "Led a cross-product effort to enhance the ease of product demos with pre-populated data, saving the Solutions Engineering team days of manual effort",
-      "Optimized expensive database queries identified by DBAs, reducing IOPS costs across multiple projects",
-      "Key author of a new company onboarding process for engineers to support a major international hiring surge in Budapest"
-    ]
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Engineering Director",
-    "dates": "March 2021 – December 2023",
-    "description": "Led five Canvas/edu teams totaling 42 engineers across the United States, Latin America, and Hungary, including a contractor team built from scratch to offload critical services maintenance and free up feature team capacity.",
-    "highlights": [
-      "Led the effort to enhance and refine the bi-annual employee assessment process, resulting in a more precise and consistent experience for Engineering Managers and improved feedback for those being evaluated",
-      "Led the engineering component of the annual intern recruitment process, yielding multiple classes of high-performing interns with a 70% hire-to-FTE conversion rate",
-      "Guided engineering managers to achieve a quarterly delivery rate of 90% for committed projects",
-      "Actively participated in hiring at all levels of the engineering organization across three geographic regions"
-    ]
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Engineering Manager, Canvas Feature Teams",
-    "dates": "September 2018 – March 2021",
-    "description": "Led four Canvas feature teams totaling 24 engineers, directly managing three team leads and three individual contributors while providing oversight across the full organization.",
-    "highlights": []
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Team Lead, Engineering",
-    "dates": "September 2015 – September 2018",
-    "description": "Led a 9-engineer team across the Chicago office, Salt Lake City office, and remote locations. Operated as a hands-on player/coach, actively contributing to the codebase while representing the company externally at job fairs, meetups, and recruiting events.",
-    "highlights": [
-      "Partnered with the Product Manager to drive open bug count from 50 down to below 5 and maintained that standard going forward",
-      "Delivered a major gradebook overhaul ahead of the company's annual conference, shipping key features including a rewritten grade release function, late and missing grade policies, persistent sorting and filtering, and anonymous and moderated grading",
-      "Enhanced team productivity by 35% through the introduction of weekly metrics and targeted one-on-one discussions to identify and address impediments"
-    ]
-  },
-  {
-    "company": "Instructure",
-    "url": "https://www.instructure.com",
-    "role": "Senior Software Engineer",
-    "dates": "July 2015 – September 2015",
-    "description": "Independent contributor on the Gradebook team for the Canvas LMS using Ruby, Rails, JavaScript, React, Redis, and Cassandra. Promoted to Team Lead within two months based on demonstrated leadership skills and a rapid reputation for solving complex, long-standing technical problems.",
-    "highlights": []
-  },
-  {
-    "company": "National Association of REALTORS®",
-    "url": "https://www.nar.realtor",
-    "role": "Vice President, Information Technology Services",
-    "dates": "September 2008 – May 2015",
-    "description": "Led the day-to-day operations and future development of the IT department with a $6M budget and 25 personnel in Chicago and Washington, DC, encompassing servers, databases, telephony, and user endpoint devices.",
-    "highlights": [
-      "Rebuilt the NAR E-Commerce Payment Gateway within six weeks, successfully passing a Level 1 PCI Audit upon completion",
-      "Successfully migrated email and calendaring for 300 employees from Lotus Notes/Domino to Microsoft Outlook/Exchange within four weeks",
-      "Led the migration of 400+ servers to a virtualized environment, reducing hardware costs, maintenance overhead, and improving redundancy",
-      "Led the corporate network redesign to modern firewall design and security standards",
-      "Mentored the Managing Director of Application Development, driving the project queue from several months behind schedule to consistent on-time delivery"
-    ]
-  },
-  {
-    "company": "National Association of REALTORS®",
-    "url": "https://www.nar.realtor",
-    "role": "Managing Director, Center for REALTOR® Technology",
-    "dates": "September 2006 – September 2008",
-    "description": "Managed a $2M department of 5 responsible for the advocacy, education, and implementation of technology for the entire NAR membership, while continuing to contribute as a Strategic Architect.",
-    "highlights": [
-      "Brought CRT technology survey development in-house, increasing quality and saving $50,000 annually",
-      "Established the \"Bloggers' Lounge\" at mid-year and annual conferences as a central gathering place and outreach platform for social media savvy members"
-    ]
-  },
-  {
-    "company": "National Association of REALTORS®",
-    "url": "https://www.nar.realtor",
-    "role": "Strategic Architect, Center for REALTOR® Technology",
-    "dates": "August 2001 – September 2006",
-    "description": "Founding member of a specialized department dedicated to the advocacy, education, and implementation of technology for NAR members, contributing as a developer, speaker, and educator across local, state, and national conferences.",
-    "highlights": [
-      "Led development on ezRETS, an open-source cross-platform ODBC driver for accessing RETS real estate data, supported on Windows, Linux, and macOS",
-      "Contributed to multiple CRT open-source projects including libRETS, JAMM, and Variman",
-      "Launched and managed NAR's first social media presence, establishing the CRT blog in August 2005"
-    ]
-  },
-  {
-    "company": "The Net Squad",
-    "role": "Internet Solutions Architect",
-    "dates": "August 2000 – May 2001",
-    "description": "Collaborated with early-stage companies to develop their initial internal and external systems.",
-    "highlights": []
-  },
-  {
-    "company": "Resource Information Management Systems (RIMS)",
-    "role": "Manager of Technical Architecture",
-    "dates": "January 1999 – August 2000",
-    "description": "Led four technical architects responsible for designing and implementing proof-of-concept projects utilizing emerging technologies, deploying new client-facing applications, and formulating company open source software policies.",
-    "highlights": []
-  },
-  {
-    "company": "Strategic Technology Resources (STR)",
-    "role": "Consultant",
-    "dates": "August 1997 – January 1999",
-    "description": "Collaborated with project leads on short-term projects to deliver multi-tier Java-based object-oriented solutions to clients.",
-    "highlights": []
-  }
-]
+{
+  "publications": [
+    "\"Large-Scale Mail with Postfix, OpenLDAP and Courier\" — Linux Journal",
+    "\"Using the Encap Package Management System to Manage Non-System Packages\" — Linux Journal"
+  ],
+  "summary": "Engineering leader with 29 years of experience spanning hands-on software development and organizational leadership. Proven track record of building and scaling high-performing engineering teams, developing engineering leaders, and driving technical initiatives across complex, distributed organizations. Technically deep, people-focused, and equally comfortable presenting to executives or diving into the code.",
+  "jobs": [
+    {
+      "company": "SUBSCRIBE",
+      "url": "https://www.subscribe.com",
+      "role": "Director of Software Engineering",
+      "dates": "October 2025 – March 2026",
+      "description": "Led a distributed engineering organization of 60+ engineers across 10 teams spread across the US, LATAM, and Europe. Coached and developed 10 team leads, including successfully turning around two underperforming leads and establishing clear growth paths.",
+      "highlights": [
+        "Redesigned the engineering interview process to improve candidate evaluation consistency and quality",
+        "Partnered with the CISO and led a two-engineer working group to evaluate and implement Snyk, serving as the primary technical driver in strengthening the organization's security posture",
+        "Collaborated with a peer Director of Engineering to align on technical vision and overall department direction"
+      ]
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Principal Engineering Manager",
+      "dates": "January 2025 – September 2025",
+      "description": "Founded and led the Growth Engineering team, assembled from existing Canvas engineers to drive revenue-focused initiatives. Team was subsequently tasked with a high-priority security remediation effort, delivering critical fixes across the Canvas codebase.",
+      "highlights": [
+        "Coordinated cross-functionally with service-owning engineering teams and the Customer Success organization to communicate upcoming API changes, ensuring alignment across technical and customer-facing stakeholders"
+      ]
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Principal Engineer",
+      "dates": "December 2023 – January 2025",
+      "description": "Operated as a trusted technical resource within the Canvas organization, sought out for complex cross-team projects, architectural guidance, and high-stakes customer escalations requiring deep product knowledge and creative problem solving.",
+      "highlights": [
+        "Designated technical resource for high-priority customer escalations with the goal of securing new sales or retaining at-risk accounts",
+        "Technical Lead and Engineering Representative on a customer load testing initiative, contributing to the successful landing of a new client",
+        "Led a cross-product effort to enhance the ease of product demos with pre-populated data, saving the Solutions Engineering team days of manual effort",
+        "Provided hands-on optimization and feature development to retain customers experiencing performance challenges with larger data sets.",
+        "Optimized expensive database queries identified by DBAs, reducing IOPS costs across multiple projects",
+        "Key author of a new company onboarding process for engineers to support a major international hiring surge in Budapest",
+        "Author and presenter of application-specific Canvas onboarding for both new and existing engineers, delivered in-person in Budapest."
+      ]
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Engineering Director",
+      "dates": "March 2021 – December 2023",
+      "description": "Led five Canvas/edu teams totaling 42 engineers across the United States, Latin America, and Hungary, including a contractor team built from scratch to offload critical services maintenance and free up feature team capacity.",
+      "highlights": [
+        "Led the effort to enhance and refine the bi-annual employee assessment process, resulting in a more precise and consistent experience for Engineering Managers conducting reviews and improved feedback for those being evaluated",
+        "Led the engineering component of the annual intern recruitment process, yielding multiple classes of high-performing interns with a 70% hire-to-FTE conversion rate",
+        "Guided engineering managers to achieve a quarterly delivery rate of 90% for committed projects",
+        "Actively participated in hiring at all levels of the engineering organization, from individual contributors to engineering managers, contributing to team growth across three geographic regions."
+      ]
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Engineering Manager, Canvas Feature Teams",
+      "dates": "September 2018 – March 2021",
+      "description": "Led four Canvas feature teams totaling 24 engineers, directly managing three team leads and three individual contributors while providing oversight across the full organization.",
+      "highlights": []
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Team Lead, Engineering",
+      "dates": "September 2015 – September 2018",
+      "description": "Led a 9-engineer team across the Chicago office, Salt Lake City office, and remote locations. Operated as a hands-on player/coach, actively contributing to the codebase while representing the company externally at job fairs, meetups, and recruiting events as a speaker and engineering ambassador.",
+      "highlights": [
+        "Partnered with the Product Manager to drive open bug count from 50 down to below 5 and maintained that standard going forward",
+        "Delivered a major Gradebook overhaul ahead of the company's annual conference, shipping key features including a rewritten grade release function, late and missing grade policies, persistent sorting and filtering, and anonymous and moderated grading",
+        "Enhanced team productivity by 35% through the introduction of weekly metrics and targeted one-on-one discussions to identify and address impediments"
+      ]
+    },
+    {
+      "company": "Instructure",
+      "url": "https://www.instructure.com",
+      "role": "Senior Software Engineer",
+      "dates": "July 2015 – September 2015",
+      "description": "Independent contributor on the Gradebook team for the Canvas learning management system. Promoted to Team Lead within two months based on demonstrated leadership skills and a rapid reputation for solving complex and long-standing technical problems.",
+      "highlights": []
+    },
+    {
+      "company": "National Association of REALTORS®",
+      "url": "https://www.nar.realtor",
+      "role": "Vice President, Information Technology Services",
+      "dates": "September 2008 – May 2015",
+      "description": "Led the day-to-day operations and future development of the IT department with a $6M budget and 25 personnel in Chicago and Washington, DC, encompassing servers, databases, telephony, and user endpoint devices.",
+      "highlights": [
+        "Rebuilt the NAR E-Commerce Payment Gateway within six weeks, successfully passing a Level 1 PCI Audit upon completion",
+        "Successfully migrated email and calendaring for 300 employees from Lotus Notes/Domino to Microsoft Outlook/Exchange within four weeks",
+        "Led the migration of 400+ servers to a virtualized environment, reducing hardware costs, maintenance overhead, and improving redundancy",
+        "Led the corporate network redesign to modern firewall design and security standards, providing hands-on support through an all-night IP renumbering effort.",
+        "Mentored the Managing Director of Application Development, driving the project queue from several months behind schedule to consistent on-time delivery",
+        "Led the development and support of the mission-critical custom e-commerce and membership systems, including web service integrations with third-party vendors."
+      ]
+    },
+    {
+      "company": "National Association of REALTORS®",
+      "url": "https://www.nar.realtor",
+      "role": "Managing Director, Center for REALTOR® Technology",
+      "dates": "September 2006 – September 2008",
+      "description": "Managed a $2M department of 5 responsible for the advocacy, education, and implementation of technology for the entire NAR membership, while continuing to contribute as a Strategic Architect.",
+      "highlights": [
+        "Brought CRT technology survey development in-house, increasing quality and saving $50,000 annually",
+        "Established the \"Bloggers' Lounge\" at mid-year and annual conferences as a central gathering place and outreach platform for social media savvy members"
+      ]
+    },
+    {
+      "company": "National Association of REALTORS®",
+      "url": "https://www.nar.realtor",
+      "role": "Strategic Architect, Center for REALTOR® Technology",
+      "dates": "August 2001 – September 2006",
+      "description": "Founding member of a specialized department dedicated to the advocacy, education, and implementation of technology for NAR members, contributing as a developer, speaker, and educator across local, state, and national conferences.",
+      "highlights": [
+        "Led development on ezRETS, an open-source cross-platform ODBC driver for accessing RETS real estate data, supported on Windows, Linux, and macOS",
+        "Contributed to multiple CRT open-source projects including libRETS, JAMM, and Variman",
+        "Launched and managed NAR's first social media presence, establishing the CRT blog in August 2005"
+      ]
+    },
+    {
+      "company": "The Net Squad",
+      "role": "Internet Solutions Architect, Principal",
+      "dates": "August 2000 – May 2001",
+      "description": "Collaborated with early-stage companies to develop their initial internal and external systems.",
+      "highlights": []
+    },
+    {
+      "company": "Resource Information Management Systems (RIMS)",
+      "role": "Manager of Technical Architecture, Development",
+      "dates": "January 1999 – August 2000",
+      "description": "Led four technical architects responsible for designing and implementing proof-of-concept projects utilizing emerging technologies, deploying new client-facing applications, and formulating company open source software policies.",
+      "highlights": []
+    },
+    {
+      "company": "Strategic Technology Resources (STR)",
+      "role": "Consultant",
+      "dates": "August 1997 – January 1999",
+      "description": "Collaborated with project leads on short-term projects to deliver multi-tier Java-based object-oriented solutions to clients.",
+      "highlights": []
+    }
+  ]
+}

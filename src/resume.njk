@@ -9,8 +9,13 @@ description: Professional experience
   <a href="/assets/Keith-Garner-Resume.pdf" class="font-pixel text-[9px] text-arcade-dim hover:text-arcade-yellow transition-colors" target="_blank" rel="noopener noreferrer">[PDF]</a>
 </div>
 
+<div class="border-l-2 border-arcade-yellow pl-6 mb-10">
+  <h2 class="font-pixel text-[10px] text-arcade-yellow mb-3 leading-loose">Executive Summary</h2>
+  <p class="text-xs text-arcade-dim leading-relaxed">{{ resume.summary }}</p>
+</div>
+
 <div class="space-y-10">
-  {% for job in resume %}
+  {% for job in resume.jobs %}
     <div class="border-l-2 border-arcade-magenta pl-6">
       <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
         <div>
@@ -38,4 +43,16 @@ description: Professional experience
       {% endif %}
     </div>
   {% endfor %}
+</div>
+
+<div class="border-l-2 border-arcade-cyan pl-6 mt-10">
+  <h2 class="font-pixel text-[10px] text-arcade-cyan mb-3 leading-loose">Publications</h2>
+  <ul class="space-y-1">
+    {% for pub in resume.publications %}
+      <li class="flex gap-2 text-xs text-arcade-dim">
+        <span class="text-arcade-cyan select-none shrink-0">&gt;</span>
+        <span>{{ pub }}</span>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
