@@ -18,6 +18,7 @@ module.exports = {
           magenta: '#ff00ff',
           dim:     '#8888aa',
           text:    '#c8c8dc',
+          white:   '#e8e8ff',
         }
       },
       fontFamily: {
