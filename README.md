@@ -26,6 +26,6 @@ Leave `PATH_PREFIX` unset (or set it to `/`) for a root deployment.
 ## Adding content
 
 - **Blog post**: add a `.md` file in `src/blog/` with frontmatter `title`, `date`, `description`
-- **Work entry**: add an object to `src/_data/work.json`
+- **Resume entry**: add an object to `src/_data/resume.json`
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`

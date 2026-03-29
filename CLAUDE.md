@@ -43,7 +43,7 @@ Tailwind CLI processes `main.css` → `output.css`. Eleventy passthrough-copies
 ## Adding content
 
 - **Blog post**: add a `.md` file in `src/blog/` with frontmatter `title`, `date`, `description`
-- **Work entry**: add an object to `src/_data/work.json`
+- **Resume entry**: add an object to `src/_data/resume.json`
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`
 
