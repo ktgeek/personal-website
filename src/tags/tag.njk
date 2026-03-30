@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /blog/tags/{{ tag | slug }}/
+---
+
+<h1 class="font-pixel text-sm text-arcade-yellow glow-yellow mb-10 leading-loose">Posts tagged: {{ tag }}</h1>
+
+{% set taggedPosts = collections[tag] | reverse %}
+{% if taggedPosts.length %}
+  <ul class="space-y-8">
+    {% for post in taggedPosts %}
+      <li class="border-l-2 border-arcade-border pl-6 hover:border-arcade-cyan transition-colors">
+        <article>
+          <a href="{{ post.url }}" class="group block">
+            <h2 class="font-pixel text-[10px] text-arcade-cyan group-hover:text-arcade-yellow group-hover:glow-yellow transition-colors mb-3 leading-loose">
+              {{ post.data.title }}
+            </h2>
+          </a>
+          <div class="flex items-center gap-2 font-pixel text-[9px] text-arcade-text mb-2 leading-loose">
+            <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+          </div>
+          {% if post.data.description %}
+            <p class="text-xs text-arcade-text mb-2 leading-relaxed">{{ post.data.description }}</p>
+          {% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="font-pixel text-[10px] text-arcade-text leading-loose">No posts found.</p>
+{% endif %}
+
+<div class="mt-12 pt-6 border-t border-arcade-border">
+  <a href="/blog/tags/" class="font-pixel text-[9px] text-arcade-text hover:text-arcade-yellow transition-colors leading-loose">← All tags</a>
+</div>

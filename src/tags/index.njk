@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Tags
+tags: []
+permalink: /blog/tags/
+---
+
+<h1 class="font-pixel text-sm text-arcade-yellow glow-yellow mb-10 leading-loose">Tags</h1>
+
+<ul class="space-y-3">
+  {% for tag in collections.tagList %}
+    <li>
+      <a href="/blog/tags/{{ tag | slug }}/"
+         class="font-pixel text-[10px] border border-arcade-magenta text-arcade-magenta px-2 py-1 hover:bg-arcade-magenta hover:text-arcade-bg transition-colors leading-none">{{ tag }}</a>
+      <span class="font-pixel text-[9px] text-arcade-text ml-2 leading-loose">({{ collections[tag].length }})</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="mt-12 pt-6 border-t border-arcade-border">
+  <a href="/blog/" class="font-pixel text-[9px] text-arcade-text hover:text-arcade-yellow transition-colors leading-loose">← All posts</a>
+</div>
