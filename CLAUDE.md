@@ -41,6 +41,11 @@ npm run clean        # Delete _site/ output directory
 Tailwind CLI processes `main.css` → `output.css`. Eleventy passthrough-copies
 `src/assets/` to `_site/assets/`. Run both together with `npm start`.
 
+### Utility classes
+
+- `.link` — standard inline link: green text, underline, hover yellow (`@apply text-arcade-green underline underline-offset-2 hover:text-arcade-yellow transition-colors`)
+- `.whitelink` — same but white text, used for Eagle-required merit badge links
+
 ## Adding content
 
 - **Blog post**: add a `.md` file in `src/blog/` with frontmatter `title`, `date`, `description`

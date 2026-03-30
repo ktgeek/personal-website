@@ -48,6 +48,12 @@ body::after {
 
 /* Pixel box borders (no border-radius) */
 @layer components {
+  .link {
+    @apply text-arcade-green underline underline-offset-2 hover:text-arcade-yellow transition-colors;
+  }
+  .whitelink {
+    @apply text-arcade-white underline underline-offset-2 hover:text-arcade-yellow transition-colors;
+  }
   .pixel-box {
     border: 2px solid #2a2a3a;
     border-radius: 0;

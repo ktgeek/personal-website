@@ -14,5 +14,6 @@
     { "label": "GitHub", "url": "https://github.com/ktgeek" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/keithgarner/" },
     { "label": "Email", "url": "mailto:kgarner@kgarner.com" }
-  ]
+  ],
+  "source": { "host": "GitHub", "url": "https://github.com/ktgeek/personal-website" }
 }
