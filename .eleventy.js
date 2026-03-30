@@ -34,6 +34,8 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.addShortcode("buildYear", () => new Date().getFullYear());
+
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addCollection("tagList", function(collectionApi) {
