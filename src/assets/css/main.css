@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/press-start-2p-latin-400-normal.woff2') format('woff2'),
+       url('/assets/fonts/press-start-2p-latin-400-normal.woff') format('woff');
+}
+
 /* Scanline overlay */
 body::after {
   content: '';

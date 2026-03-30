@@ -22,6 +22,7 @@ npm run clean        # Delete _site/ output directory
 - `src/_includes/layouts/` — Nunjucks layouts: `base.njk`, `post.njk`
 - `src/assets/css/main.css` — Tailwind source (committed)
 - `src/assets/css/output.css` — Tailwind output (gitignored, generated)
+- `src/assets/fonts/` — self-hosted fonts (Press Start 2P, copied from `@fontsource/press-start-2p`)
 - `src/blog/` — blog posts as Markdown; `blog.json` sets layout + tag
 - `src/sitemap.njk` — generates `/sitemap.xml` (excludes `/quotes/`)
 - `_site/` — build output (gitignored)
