@@ -1,6 +1,6 @@
 ---
 title: Hello, world... again
-date: 2026-03-27
+date: 2026-03-30
 description: Relaunching my personal site after years of neglect.
 tags:
   - coding
@@ -51,10 +51,7 @@ from my old Wordpress based blog before I tore it down, mostly to kick the tires
 syntax highlighting. That went really well and I'm leaving those migrated posts around, at least for now, to maintain
 some of my old content.
 
-## Next steps
+## What's next?
 
-- [x] Update my front page to have some real information about me and not the generated ones.
-- [ ] Update the About page to be about me
-- [ ] Finish fleshing out the work page and adding things like a link to the newest version of my resume.
-- [ ] Do more writing more often, at least more than once every 9 years. My last post on the wordpress blog was all the
-  way back in 2017!
+I guess I start doing more blogging and trying to keep it up to date. We'll see. I have some free time currently, so it
+might be a good time to document my home network.
