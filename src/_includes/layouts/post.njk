@@ -8,13 +8,13 @@ breadcrumbParent:
 <article>
   <header class="mb-10">
     <h1 class="font-pixel text-xs text-arcade-yellow glow-yellow mb-4 leading-loose">{{ title }}</h1>
-    <div class="flex items-center gap-3 font-pixel text-[9px] text-arcade-dim leading-loose">
+    <div class="flex items-center gap-3 font-pixel text-[9px] leading-loose">
       <time datetime="{{ date | htmlDateString }}">
         {{ date | readableDate }}
       </time>
       {% if description %}
         <span>|</span>
-        <span class="text-arcade-dim">{{ description }}</span>
+        <span>{{ description }}</span>
       {% endif %}
     </div>
     {% set userTags = tags | reject("equalto", "post") | list %}

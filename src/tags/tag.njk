@@ -20,20 +20,20 @@ permalink: /blog/tags/{{ tag | slug }}/
               {{ post.data.title }}
             </h2>
           </a>
-          <div class="flex items-center gap-2 font-pixel text-[9px] text-arcade-text mb-2 leading-loose">
+          <div class="flex items-center gap-2 font-pixel text-[9px] mb-2 leading-loose">
             <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
           </div>
           {% if post.data.description %}
-            <p class="text-xs text-arcade-text mb-2 leading-relaxed">{{ post.data.description }}</p>
+            <p class="text-xs mb-2 leading-relaxed">{{ post.data.description }}</p>
           {% endif %}
         </article>
       </li>
     {% endfor %}
   </ul>
 {% else %}
-  <p class="font-pixel text-[10px] text-arcade-text leading-loose">No posts found.</p>
+  <p class="font-pixel text-[10px] leading-loose">No posts found.</p>
 {% endif %}
 
 <div class="mt-12 pt-6 border-t border-arcade-border">
-  <a href="/blog/tags/" class="font-pixel text-[9px] text-arcade-text hover:text-arcade-yellow transition-colors leading-loose">← All tags</a>
+  <a href="/blog/tags/" class="font-pixel text-[9px] hover:text-arcade-yellow transition-colors leading-loose">← All tags</a>
 </div>
