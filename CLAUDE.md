@@ -24,6 +24,7 @@ npm run clean        # Delete _site/ output directory
 - `src/assets/css/output.css` — Tailwind output (gitignored, generated)
 - `src/assets/fonts/` — self-hosted fonts (Press Start 2P, copied from `@fontsource/press-start-2p`)
 - `src/blog/` — blog posts as Markdown; `blog.json` sets layout + tag
+- `src/tags/` — tag listing pages (`index.njk` = all tags, `tag.njk` = per-tag post list)
 - `src/sitemap.njk` — generates `/sitemap.xml` (excludes `/quotes/`)
 - `_site/` — build output (gitignored)
 
@@ -41,10 +42,25 @@ npm run clean        # Delete _site/ output directory
 Tailwind CLI processes `main.css` → `output.css`. Eleventy passthrough-copies
 `src/assets/` to `_site/assets/`. Run both together with `npm start`.
 
+### Arcade color conventions
+
+The site uses a custom arcade/retro palette defined in `tailwind.config.js`:
+
+- `arcade-text` (`#c8c8dc`) — default body text; set on `<body>` in `base.njk`, do not repeat it on child elements
+- `arcade-dim` (`#8888aa`) — intentionally subdued elements only: inactive nav links, footer, secondary action links (e.g. `[PDF]`)
+- `arcade-yellow` — headings, highlights, hover states
+- `arcade-cyan` — subheadings, links within content cards
+- `arcade-magenta` — tags, bullet markers, accent borders
+- `arcade-green` — inline links (via `.link`), back-navigation links
+
 ### Utility classes
 
 - `.link` — standard inline link: green text, underline, hover yellow (`@apply text-arcade-green underline underline-offset-2 hover:text-arcade-yellow transition-colors`)
 - `.whitelink` — same but white text, used for Eagle-required merit badge links
+
+### Eleventy shortcodes
+
+- `{% buildYear %}` — outputs the current build year (defined in `.eleventy.js`); used in the footer copyright
 
 ## Adding content
 
