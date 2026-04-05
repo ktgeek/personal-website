@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding assistants when working with code in this repository.
 
 ## Project
 
@@ -69,8 +69,12 @@ The site uses a custom arcade/retro palette defined in `tailwind.config.js`:
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`
 
+## Workflow
+
+Always enter plan mode before making any file changes — including source code, configuration, and documentation. Present
+the plan and get approval before implementing.
+
 ## Maintenance
 
-Keep this file up-to-date as the project evolves. When making changes that affect
-project structure, commands, or conventions described here, update the relevant
-sections of this file in the same commit/session.
+Keep this file up-to-date as the project evolves. When making changes that affect project structure, commands, or
+conventions described here, update the relevant sections of this file in the same commit/session.
