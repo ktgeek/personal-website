@@ -64,6 +64,31 @@ body::after {
   }
 }
 
+/* Footnote styling */
+.footnote-ref a {
+  color: #00f5ff; /* arcade-cyan: distinguish from body links */
+  text-decoration: none;
+  font-size: 0.75em;
+  @apply glow-cyan;
+}
+
+.footnotes-sep {
+  border-style: dashed;
+  border-color: #2a2a3a;
+  margin-top: 2.5rem;
+}
+
+.footnotes {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.footnote-backref {
+  color: #39ff14; /* arcade-green */
+  margin-left: 0.25em;
+  text-decoration: none;
+}
+
 /* CRT glow effects */
 @layer utilities {
   .glow-yellow  { text-shadow: 0 0 8px #ffe600, 0 0 20px rgba(255, 230, 0, 0.4); }

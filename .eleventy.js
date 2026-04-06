@@ -3,8 +3,12 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
 const { rssPlugin } = require("@11ty/eleventy-plugin-rss");
 const siteData = require("./src/_data/site.json");
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
 
 module.exports = function(eleventyConfig) {
+  const md = markdownIt({ html: true }).use(markdownItFootnote);
+  eleventyConfig.setLibrary("md", md);
   const pathPrefix = process.env.PATH_PREFIX || "/";
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
