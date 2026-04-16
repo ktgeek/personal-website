@@ -44,7 +44,7 @@ fitting and not working out. It wasn't giving up. It wasn't failing. It was reco
 again outside of work... things don't work out sometimes, it's no one's fault necessarily, it just wasn't a fit.
 
 And so, now, much like when I was in the dating world... time to ask a bunch of ~~people~~ companies out and see what
-fits. (Oh, if you're hiring, checkout my [Resume](/resume).)
+fits. (Oh, if you're hiring, checkout my [resume](/resume).)
 
 [^1]: The campsite rule is "leave the campsite better than you found it." In dating, it's the same thing, but "other
     person" instead of campsite.
