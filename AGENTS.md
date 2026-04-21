@@ -23,6 +23,7 @@ npm run clean        # Delete _site/ output directory
 - `src/assets/css/main.css` — Tailwind source (committed)
 - `src/assets/css/output.css` — Tailwind output (gitignored, generated)
 - `src/assets/fonts/` — self-hosted fonts (Press Start 2P, copied from `@fontsource/press-start-2p`)
+- `src/og-images.11ty.js` — generates 1200×630 PNG social cards; one per blog post (`assets/og/[slug].png`) plus `assets/og/default.png` for non-post pages. Uses `satori` + `sharp`. Font size scales (44→36→28px) based on title length.
 - `src/blog/` — blog posts as Markdown; `blog.json` sets layout + tag
 - `src/tags/` — tag listing pages (`index.njk` = all tags, `tag.njk` = per-tag post list)
 - `src/sitemap.njk` — generates `/sitemap.xml` (excludes `/quotes/`)
