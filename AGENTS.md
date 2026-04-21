@@ -13,6 +13,16 @@ npm install          # Install dependencies
 npm run build        # Build: Tailwind CSS + Eleventy (outputs to _site/)
 npm start            # Dev server: Tailwind watch + Eleventy serve (port 8080)
 npm run clean        # Delete _site/ output directory
+npm run deploy       # Clean, build, and rsync to remote server (requires deploy.env)
+```
+
+## Deployment
+
+`npm run deploy` runs `deploy.sh`, which sources `deploy.env` for the remote host and path, then runs clean → build → rsync. `deploy.env` is gitignored; copy `deploy.env.example` and fill in your values:
+
+```bash
+DEPLOY_HOST=your-server-hostname
+DEPLOY_PATH=/path/on/remote/server
 ```
 
 ## Structure

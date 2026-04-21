@@ -2,3 +2,4 @@ node_modules/
 _site/
 src/assets/css/output.css
 .claude/
+deploy.env

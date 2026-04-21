@@ -5,7 +5,8 @@
   "scripts": {
     "start": "concurrently \"npx @11ty/eleventy --serve\" \"npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css --watch\"",
     "build": "npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css && npx @11ty/eleventy",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
