@@ -66,6 +66,7 @@ The site uses a custom arcade/retro palette defined in `tailwind.config.js`:
 
 - **Blog post**: add a `.md` file in `src/blog/` with frontmatter `title`, `date`, `description`
   - Footnotes are supported via `markdown-it-footnote`: use `[^1]` inline and `[^1]: text` at the end
+  - Abbreviations are supported via `markdown-it-abbr`: use `SomeAbbreviation` inline and `*[SomeAbbreviaton]: Expantion of the abbreviation` at the end
 - **Resume entry**: add an object to `src/_data/resume.json`
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`
