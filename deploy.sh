@@ -19,4 +19,4 @@ fi
 
 npm run clean
 npm run build
-rsync -avr --delete _site/ "$DEPLOY_HOST:$DEPLOY_PATH"
+rsync -acr --out-format='%n' --delete _site/ "$DEPLOY_HOST:$DEPLOY_PATH"
