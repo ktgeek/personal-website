@@ -54,6 +54,12 @@ module.exports = function(eleventyConfig) {
     return [...tagSet].sort();
   });
 
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
+
   return {
     pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
