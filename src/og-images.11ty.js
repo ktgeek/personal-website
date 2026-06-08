@@ -37,9 +37,26 @@ module.exports = class OgImages {
     );
 
     const title = post ? post.data.title : site.name;
-    const titleFontSize =
-      title.length > 50 ? 28 :
-      title.length > 30 ? 36 : 44;
+    const description = post ? post.data.description : site.description;
+    const titleFontSize = description
+      ? (title.length > 40 ? 22 : title.length > 20 ? 28 : 36)
+      : (title.length > 50 ? 28 : title.length > 30 ? 36 : 44);
+
+    const descriptionEl = description ? {
+      type: "div",
+      props: {
+        style: {
+          display: "flex",
+          color: DIM,
+          fontFamily: '"Press Start 2P"',
+          fontSize: 14,
+          lineHeight: 1.8,
+          marginTop: 28,
+          maxWidth: 1000,
+        },
+        children: description,
+      },
+    } : null;
 
     const element = {
       type: "div",
@@ -80,21 +97,33 @@ module.exports = class OgImages {
                     children: "KEITH T. GARNER",
                   },
                 },
-                // Middle: post/page title
+                // Middle: post/page title + optional description
                 {
                   type: "div",
                   props: {
                     style: {
                       display: "flex",
-                      color: YELLOW,
-                      fontFamily: '"Press Start 2P"',
-                      fontSize: titleFontSize,
-                      lineHeight: 1.6,
+                      flexDirection: "column",
                       flexGrow: 1,
-                      alignItems: "center",
+                      justifyContent: "center",
                       maxWidth: 1000,
                     },
-                    children: title,
+                    children: [
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            display: "flex",
+                            color: YELLOW,
+                            fontFamily: '"Press Start 2P"',
+                            fontSize: titleFontSize,
+                            lineHeight: 1.6,
+                          },
+                          children: title,
+                        },
+                      },
+                      descriptionEl,
+                    ].filter(Boolean),
                   },
                 },
                 // Bottom: domain + CTA
