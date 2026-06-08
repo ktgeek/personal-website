@@ -3,7 +3,8 @@ module.exports = {
   content: [
     "./src/**/*.njk",
     "./src/**/*.md",
-    "./src/**/*.html"
+    "./src/**/*.html",
+    "./eleventy.config.mjs"
   ],
   theme: {
     extend: {

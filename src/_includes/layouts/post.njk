@@ -5,6 +5,20 @@ breadcrumbParent:
   label: Blog
   url: /blog/
 ---
+{% block extrahead %}
+<link rel="stylesheet" href="/assets/css/photoswipe.css">
+{% endblock %}
+{% block scripts %}
+<script type="module">
+import PhotoSwipeLightbox from '/assets/js/photoswipe-lightbox.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '.pswp-gallery',
+  children: 'a[data-pswp-width]',
+  pswpModule: () => import('/assets/js/photoswipe.esm.min.js')
+});
+lightbox.init();
+</script>
+{% endblock %}
 
 <article>
   <header class="mb-10">

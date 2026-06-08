@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="/assets/css/output.css?v={{ build.cssHash }}" />
   <link rel="stylesheet" href="/assets/css/prism-tomorrow.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }} Blog" href="/feed.xml" />
+  {% block extrahead %}{% endblock %}
 </head>
 <body class="h-full flex flex-col bg-arcade-bg text-arcade-text font-mono">
 
@@ -125,5 +126,6 @@
       iconClose.classList.toggle('hidden', isOpen);
     });
   </script>
+  {% block scripts %}{% endblock %}
 </body>
 </html>
