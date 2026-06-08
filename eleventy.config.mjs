@@ -45,6 +45,7 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.ignores.add("src/assets/files");
   eleventyConfig.addPassthroughCopy({
     "node_modules/photoswipe/dist/photoswipe.css": "assets/css/photoswipe.css",
     "node_modules/photoswipe/dist/photoswipe-lightbox.esm.min.js": "assets/js/photoswipe-lightbox.esm.min.js",
