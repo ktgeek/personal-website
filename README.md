@@ -9,6 +9,7 @@ npm install          # Install dependencies
 npm run build        # Build site (outputs to _site/)
 npm start            # Dev server on port 8080
 npm run clean        # Delete _site/
+npm run deploy       # runs deploy.sh
 ```
 
 ## Deploying to a subdirectory
