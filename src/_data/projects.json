@@ -3,7 +3,7 @@
     "name": "supreSSHion",
     "description": "macOS menubar agent that listens for screen lock and sleep events and unloads SSH keys from memory.",
     "url": "https://github.com/ktgeek/supreSSHion",
-    "tech": ["Swift", "ObjC", "macOS"]
+    "tech": ["Swift", "macOS"]
   },
   {
     "name": "bluld",
