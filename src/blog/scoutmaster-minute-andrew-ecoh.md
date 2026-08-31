@@ -36,11 +36,11 @@ Scout led.
 
 Cyndi also started a tradition for us leaders that I love and hope this troop keeps forever. This patrol patch I'm
 wearing *&lt;rip off patch*&gt; is an Infinity Patrol patch. The current definition of the Infinity Patrol, as I
-understand it, is an adult leader who does not have a Scout in the troop. Evan and I joined the Infinity Patrol on the
-same day. He turned 18 and became an Assistant Scoutmaster, which meant I no longer had a Scout in the troop. So the two
-of us are relatively new members. There are people in this room who were with Cyndi for many more of those years… Sheri
-Taylor, Monique Sparacino, Dan Kubick, Joe J, Steve Dudek, Dan Trankler, quitters like Jeff DeBuhr or Andrea Kohl…
-*^lt;mention whoever else is around&lt;*. And there has been a running joke in the Infinity Patrol that we are all under
+understand it, is an adult leader who dosshes not have a Scout in the troop. Evan and I joined the Infinity Patrol on
+the same day. He turned 18 and became an Assistant Scoutmaster, which meant I no longer had a Scout in the troop. So the
+two of us are relatively new members. There are people in this room who were with Cyndi for many more of those years…
+Sheri Taylor, Monique Sparacino, Dan Kubick, Joe J, Steve Dudek, Dan Trankler, quitters like Jeff DeBuhr or Andrea Kohl…
+*&lt;mention whoever else is around&gt;*. And there has been a running joke in the Infinity Patrol that we are all under
 contract, that we have to stay on as leaders until Andrew earned Eagle. So with that said… we don't need these anymore!
 *&lt;everyone makes a show of turning in their patrol patches to Cyndi*&gt;
 
