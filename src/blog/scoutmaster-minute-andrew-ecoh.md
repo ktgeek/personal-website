@@ -86,7 +86,7 @@ Another Eagle told me:
 > Eagle Scout is just a title, but that title carries a lot of weight and steps. That's what people see when they hear
 > Eagle, 'a model Scout who has been on a journey and has succeeded.' What people don't see when they hear Eagle is the
 > continuation an Eagle has after they reach it. An Eagle continues to step forward, as it's now a part of them to keep
-> on going and learning."
+> on going and learning.
 
 In case anyone was wondering, that Eagle I just quoted is today's MC, Evan Garner.
 
