@@ -86,7 +86,17 @@ The site uses a custom arcade/retro palette defined in `tailwind.config.js`:
     {% endgallery %}
     ```
     Images render as a thumbnail grid (2 cols mobile, 3 cols desktop). Clicking opens PhotoSwipe. Multiple galleries per post are supported.
-- **Resume entry**: add an object to `src/_data/resume.json`
+- **Resume entry**: add an object to the `jobs` array in `src/_data/resume.json` for detailed/recent roles
+  — fields are `company`, `url` (optional, omit for employers with no link), `location` (optional, e.g.
+  `"Remote"` or `"Chicago, IL"`), `role`, `dates`, `technologies` (optional array of strings, rendered as
+  tag pills reusing the tech-tag style from `projects.njk`), `description`, and `highlights` (array, can be
+  empty). Older/condensed roles go in the separate top-level `earlierExperience` array instead — each item
+  is `{ company, location, dates, role }` only (no `description`/`highlights`/`technologies`), rendered in
+  its own reduced-emphasis (`arcade-dim`) section after the main job list. The file also has a top-level
+  `summary` string, `publications` array of strings, `education` array of `{ school, location, degree }`
+  objects, and `openSource` array of `{ name, url, description }` objects (intentionally redundant with
+  `projects.json` for entries also listed there — the resume page is meant to stand on its own) — all
+  rendered by `src/resume.njk`.
 - **Project**: add an object to `src/_data/projects.json`
 - **Nav link**: edit `site.nav` in `src/_data/site.json`
 
