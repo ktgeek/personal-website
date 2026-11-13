@@ -1,8 +1,9 @@
 # Personal Site
 
-Personal website built with [Eleventy](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v3.
+Personal website built with [Eleventy](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v4.
 
-Requires Node 22.12 or newer.
+Requires Node 22.12 or newer. Visitors need Safari 16.4+, Chrome 111+, or Firefox 128+ (Tailwind 4 relies on
+`@property`, `color-mix()`, and cascade layers); older browsers lose styling.
 
 ## Commands
 

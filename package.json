@@ -6,8 +6,8 @@
     "node": ">=22.12"
   },
   "scripts": {
-    "start": "concurrently \"npx @11ty/eleventy --serve\" \"npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css --watch\"",
-    "build": "npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/output.css && npx @11ty/eleventy",
+    "start": "concurrently \"npx @11ty/eleventy --serve\" \"npx @tailwindcss/cli -i ./src/assets/css/main.css -o ./src/assets/css/output.css --watch\"",
+    "build": "npx @tailwindcss/cli -i ./src/assets/css/main.css -o ./src/assets/css/output.css && npx @11ty/eleventy",
     "clean": "rm -rf _site",
     "deploy": "bash deploy.sh"
   },
@@ -16,6 +16,7 @@
     "@11ty/eleventy-img": "^7.1.1",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@tailwindcss/cli": "^4.3.5",
     "@tailwindcss/typography": "^0.5.19",
     "concurrently": "^10.0.7",
     "markdown-it-abbr": "^2.0.0",
@@ -23,7 +24,7 @@
     "photoswipe": "^5.4.4",
     "satori": "^0.63.2",
     "sharp": "^0.35.5",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^4.3.5"
   },
   "devDependencies": {
     "eleventy-plugin-robotstxt": "^1.0.2"
