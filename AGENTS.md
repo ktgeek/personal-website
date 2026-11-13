@@ -5,7 +5,8 @@ This file provides guidance to AI coding assistants when working with code in th
 ## Project
 
 Personal website built with [Eleventy (11ty)](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v3.
-Requires Node 22.12 or newer (`engines` in `package.json`; `@11ty/eleventy-img` 7 and its dependencies need it).
+Requires Node 22.12 or newer (`engines` in `package.json`; `@11ty/eleventy-img` 7, `concurrently` 10 and
+their dependencies need it).
 
 ## Commands
 
