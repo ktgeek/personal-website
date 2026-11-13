@@ -2,6 +2,8 @@
 
 Personal website built with [Eleventy](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v3.
 
+Requires Node 22.12 or newer.
+
 ## Commands
 
 ```bash
