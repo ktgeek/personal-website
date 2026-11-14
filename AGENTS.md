@@ -37,6 +37,9 @@ DEPLOY_PATH=/path/on/remote/server
 - `src/blog/` — blog posts as Markdown; `blog.json` sets layout + tag
 - `src/tags/` — tag listing pages (`index.njk` = all tags, `tag.njk` = per-tag post list)
 - `src/sitemap.njk` — generates `/sitemap.xml` (excludes `/quotes/`)
+- `src/index.njk` — home page. Its inline script draws the profile photo's "pixel mode" onto a canvas from the
+  transformed `<img>`; that depends on the image transform's srcset (a density-corrected `naturalWidth`) and on the
+  avatar's `loading="eager"` / `sizes="160px"` overrides, which must match the wrapper's `w-40`.
 - `_site/` — build output (gitignored)
 
 ## Generated files

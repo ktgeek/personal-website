@@ -16,10 +16,13 @@ title: Home
     </div>
     <div class="shrink-0 flex justify-center">
       <div class="relative w-40 h-40 pixel-box-yellow cursor-pointer select-none" id="profile-wrapper" title="Click for pixel mode">
+        {# keep sizes in sync with the wrapper's w-40 (160px) #}
         <img src="/assets/images/keith.jpg"
              id="profile-img"
              alt="Keith T. Garner"
              class="w-full h-full object-cover transition-opacity duration-200"
+             loading="eager"
+             sizes="160px"
              crossorigin="anonymous">
         <canvas id="pixel-canvas"
                 class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-200"
@@ -41,43 +44,46 @@ title: Home
   if (!wrapper || !img || !canvas || !label) return;
 
   const ctx = canvas.getContext('2d');
-  //const PIXELS = 20; // grid size — lower = chunkier
   const PIXELS = 40; // grid size — lower = chunkier
   let locked = false;
   let rendered = false;
 
+  // Returns false when the photo hasn't loaded yet or the box has no size; the load listener below retries the former
   function renderPixels() {
-    if (rendered) return;
+    if (rendered) return true;
+    if (!img.complete || !img.naturalWidth) return false;
     const w = img.offsetWidth;
     const h = img.offsetHeight;
+    if (!w || !h) return false;
     canvas.width  = w;
     canvas.height = h;
 
-    // crop to center square (matching object-cover behaviour)
+    // grid with approximately square cells that matches the box's aspect ratio
+    const cols = PIXELS;
+    const rows = Math.max(1, Math.round(PIXELS * h / w));
+
+    // cover the grid with the image, centered (matching object-cover behaviour). The whole image is drawn scaled
+    // and offset because, with a responsive srcset, naturalWidth is density-corrected: it gives the aspect ratio
+    // but not the loaded file's pixel size.
     const nw = img.naturalWidth;
     const nh = img.naturalHeight;
-    const aspect = w / h;
-    let sx, sy, sw, sh;
-    if (nw / nh > aspect) {
-      sh = nh; sw = nh * aspect;
-      sx = (nw - sw) / 2; sy = 0;
-    } else {
-      sw = nw; sh = nw / aspect;
-      sx = 0; sy = (nh - sh) / 2;
-    }
+    const scale = Math.max(cols / nw, rows / nh);
+    const dw = nw * scale;
+    const dh = nh * scale;
 
     const off = document.createElement('canvas');
-    off.width = PIXELS; off.height = PIXELS;
+    off.width = cols; off.height = rows;
     const offCtx = off.getContext('2d');
-    offCtx.drawImage(img, sx, sy, sw, sh, 0, 0, PIXELS, PIXELS);
+    offCtx.drawImage(img, (cols - dw) / 2, (rows - dh) / 2, dw, dh);
 
     ctx.imageSmoothingEnabled = false;
-    ctx.drawImage(off, 0, 0, PIXELS, PIXELS, 0, 0, w, h);
+    ctx.drawImage(off, 0, 0, cols, rows, 0, 0, w, h);
     rendered = true;
+    return true;
   }
 
   function showPixels() {
-    renderPixels();
+    if (!renderPixels()) return;
     canvas.style.opacity = '1';
     label.style.opacity  = '1';
     img.style.opacity    = '0';
@@ -89,6 +95,9 @@ title: Home
     img.style.opacity    = '1';
   }
 
+  img.addEventListener('load', () => {
+    if (locked || wrapper.matches(':hover')) showPixels();
+  });
   wrapper.addEventListener('mouseenter', showPixels);
   wrapper.addEventListener('mouseleave', () => { if (!locked) hidePixels(); });
   wrapper.addEventListener('click', () => {
