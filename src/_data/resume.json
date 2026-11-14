@@ -1,6 +1,11 @@
 {
   "openSource": [
     {
+      "name": "ruby-band-mcp-server",
+      "url": "https://github.com/ktgeek/ruby-band-mcp-server",
+      "description": "MCP server in Ruby for the BAND Open API, letting AI assistants like Claude list bands and read, post, and comment in them; published as a RubyGem and a multi-arch Docker image."
+    },
+    {
       "name": "supreSSHion",
       "url": "https://github.com/ktgeek/supreSSHion",
       "description": "macOS menu bar agent in Swift that unloads SSH keys from ssh-agent on screen lock or sleep, narrowing the window an unattended machine can be used to reach remote systems."
