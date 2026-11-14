@@ -1,5 +1,11 @@
 [
   {
+    "name": "ruby-band-mcp-server",
+    "description": "An MCP server for the BAND Open API, letting AI assistants list bands and read, post, and comment in them. Available as a Ruby gem or Docker image.",
+    "url": "https://github.com/ktgeek/ruby-band-mcp-server",
+    "tech": ["Ruby", "MCP", "AI", "Docker"]
+  },
+  {
     "name": "supreSSHion",
     "description": "macOS menubar agent that listens for screen lock and sleep events and unloads SSH keys from memory.",
     "url": "https://github.com/ktgeek/supreSSHion",
