@@ -45,16 +45,19 @@ title: Home
   let locked = false;
   let rendered = false;
 
+  // Returns false when the photo hasn't loaded yet or the box has no size; the load listener below retries the former
   function renderPixels() {
-    if (rendered) return;
+    if (rendered) return true;
+    if (!img.complete || !img.naturalWidth) return false;
     const w = img.offsetWidth;
     const h = img.offsetHeight;
+    if (!w || !h) return false;
     canvas.width  = w;
     canvas.height = h;
 
     // grid with approximately square cells that matches the box's aspect ratio
     const cols = PIXELS;
-    const rows = Math.round(PIXELS * h / w);
+    const rows = Math.max(1, Math.round(PIXELS * h / w));
 
     // cover the grid with the image, centered (matching object-cover behaviour). The whole image is drawn scaled
     // and offset because, with a responsive srcset, naturalWidth is density-corrected: it gives the aspect ratio
@@ -73,10 +76,11 @@ title: Home
     ctx.imageSmoothingEnabled = false;
     ctx.drawImage(off, 0, 0, cols, rows, 0, 0, w, h);
     rendered = true;
+    return true;
   }
 
   function showPixels() {
-    renderPixels();
+    if (!renderPixels()) return;
     canvas.style.opacity = '1';
     label.style.opacity  = '1';
     img.style.opacity    = '0';
@@ -88,6 +92,9 @@ title: Home
     img.style.opacity    = '1';
   }
 
+  img.addEventListener('load', () => {
+    if (locked || wrapper.matches(':hover')) showPixels();
+  });
   wrapper.addEventListener('mouseenter', showPixels);
   wrapper.addEventListener('mouseleave', () => { if (!locked) hidePixels(); });
   wrapper.addEventListener('click', () => {
