@@ -5,8 +5,8 @@ This file provides guidance to AI coding assistants when working with code in th
 ## Project
 
 Personal website built with [Eleventy (11ty)](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v4.
-Requires Node 22.12 or newer (`engines` in `package.json`; `@11ty/eleventy-img` 7, `concurrently` 10 and
-their dependencies need it).
+Requires Node 22.12 or newer (`engines` in `package.json`, enforced by `deploy.sh`; `@11ty/eleventy-img` 7,
+`concurrently` 10 and their dependencies need it).
 Visitors need Safari 16.4+, Chrome 111+, or Firefox 128+ (Tailwind 4 relies on `@property`, `color-mix()`, and
 cascade layers); older browsers lose styling.
 
@@ -22,7 +22,9 @@ npm run deploy       # Clean, build, and rsync to remote server (requires deploy
 
 ## Deployment
 
-`npm run deploy` runs `deploy.sh`, which sources `deploy.env` for the remote host and path, then runs clean → build → rsync. `deploy.env` is gitignored; copy `deploy.env.example` and fill in your values:
+`npm run deploy` runs `deploy.sh`, which sources `deploy.env` for the remote host and path, then runs clean → build →
+rsync. It first refuses to run on a Node older than `engines.node` in `package.json`, so a failed deploy can't leave
+`_site` deleted. `deploy.env` is gitignored; copy `deploy.env.example` and fill in your values:
 
 ```bash
 DEPLOY_HOST=your-server-hostname
