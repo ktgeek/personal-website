@@ -16,10 +16,13 @@ title: Home
     </div>
     <div class="shrink-0 flex justify-center">
       <div class="relative w-40 h-40 pixel-box-yellow cursor-pointer select-none" id="profile-wrapper" title="Click for pixel mode">
+        {# keep sizes in sync with the wrapper's w-40 (160px) #}
         <img src="/assets/images/keith.jpg"
              id="profile-img"
              alt="Keith T. Garner"
              class="w-full h-full object-cover transition-opacity duration-200"
+             loading="eager"
+             sizes="160px"
              crossorigin="anonymous">
         <canvas id="pixel-canvas"
                 class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-200"
