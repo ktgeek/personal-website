@@ -1,6 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Scan only the site sources, not AGENTS.md/README.md prose */
+@import "tailwindcss" source(none);
+@source "../../../src";
+@source "../../../eleventy.config.mjs";
+@plugin "@tailwindcss/typography";
+
+/* Tailwind 4 limits hover: to hover-capable pointers; keep v3's behavior so taps show hover states on touch devices */
+@custom-variant hover (&:hover);
+
+@theme {
+  --color-arcade-bg:      #0a0a0f;
+  --color-arcade-surface: #12121a;
+  --color-arcade-border:  #2a2a3a;
+  --color-arcade-yellow:  #ffe600;
+  --color-arcade-green:   #39ff14;
+  --color-arcade-cyan:    #00f5ff;
+  --color-arcade-magenta: #ff00ff;
+  --color-arcade-dim:     #8888aa;
+  --color-arcade-text:    #c8c8dc;
+  --color-arcade-white:   #e8e8ff;
+
+  --font-pixel: "Press Start 2P", monospace;
+  --font-mono:  "Courier New", Courier, monospace;
+}
+
+/* Tailwind 4 preflight made buttons `cursor: default`; keep the pointer from v3 */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Blog post prose theme (used as `prose prose-arcade`) */
+.prose-arcade {
+  --tw-prose-body:          var(--color-arcade-text);
+  --tw-prose-headings:      var(--color-arcade-cyan);
+  --tw-prose-lead:          var(--color-arcade-text);
+  --tw-prose-links:         var(--color-arcade-green);
+  --tw-prose-bold:          var(--color-arcade-yellow);
+  --tw-prose-counters:      var(--color-arcade-dim);
+  --tw-prose-bullets:       var(--color-arcade-magenta);
+  --tw-prose-hr:            var(--color-arcade-border);
+  --tw-prose-quotes:        var(--color-arcade-cyan);
+  --tw-prose-quote-borders: var(--color-arcade-magenta);
+  --tw-prose-captions:      var(--color-arcade-dim);
+  --tw-prose-code:          var(--color-arcade-yellow);
+  --tw-prose-pre-code:      #cccccc;
+  --tw-prose-pre-bg:        #1a1a2a;
+  --tw-prose-th-borders:    var(--color-arcade-border);
+  --tw-prose-td-borders:    var(--color-arcade-border);
+}
 
 @font-face {
   font-family: 'Press Start 2P';
@@ -31,7 +80,7 @@ body::after {
 .cursor-blink::after {
   content: '_';
   animation: blink 1s step-end infinite;
-  color: #ffe600;
+  color: var(--color-arcade-yellow);
   margin-left: 2px;
 }
 
@@ -55,18 +104,18 @@ body::after {
     @apply text-arcade-white underline underline-offset-2 hover:text-arcade-yellow transition-colors;
   }
   .pixel-box {
-    border: 2px solid #2a2a3a;
+    border: 2px solid var(--color-arcade-border);
     border-radius: 0;
   }
   .pixel-box-yellow {
-    border: 2px solid #ffe600;
+    border: 2px solid var(--color-arcade-yellow);
     border-radius: 0;
   }
 }
 
 /* Footnote styling */
 .footnote-ref a {
-  color: #00f5ff; /* arcade-cyan: distinguish from body links */
+  color: var(--color-arcade-cyan); /* distinguish from body links */
   text-decoration: none;
   font-size: 0.75em;
   @apply glow-cyan;
@@ -74,7 +123,7 @@ body::after {
 
 .footnotes-sep {
   border-style: dashed;
-  border-color: #2a2a3a;
+  border-color: var(--color-arcade-border);
   margin-top: 2.5rem;
 }
 
@@ -84,15 +133,31 @@ body::after {
 }
 
 .footnote-backref {
-  color: #39ff14; /* arcade-green */
+  color: var(--color-arcade-green);
   margin-left: 0.25em;
   text-decoration: none;
 }
 
+/* Unlayered rules beat utilities, so the prose-a:hover yellow doesn't reach footnote links on its own */
+.footnote-ref a:hover,
+.footnote-backref:hover {
+  color: var(--color-arcade-yellow);
+}
+
 /* CRT glow effects */
-@layer utilities {
-  .glow-yellow  { text-shadow: 0 0 8px #ffe600, 0 0 20px rgba(255, 230, 0, 0.4); }
-  .glow-green   { text-shadow: 0 0 8px #39ff14, 0 0 20px rgba(57, 255, 20, 0.4); }
-  .glow-cyan    { text-shadow: 0 0 8px #00f5ff, 0 0 20px rgba(0, 245, 255, 0.4); }
-  .glow-magenta { text-shadow: 0 0 8px #ff00ff, 0 0 20px rgba(255, 0, 255, 0.4); }
+@utility glow-yellow {
+  text-shadow: 0 0 8px var(--color-arcade-yellow),
+    0 0 20px color-mix(in srgb, var(--color-arcade-yellow) 40%, transparent);
+}
+@utility glow-green {
+  text-shadow: 0 0 8px var(--color-arcade-green),
+    0 0 20px color-mix(in srgb, var(--color-arcade-green) 40%, transparent);
+}
+@utility glow-cyan {
+  text-shadow: 0 0 8px var(--color-arcade-cyan),
+    0 0 20px color-mix(in srgb, var(--color-arcade-cyan) 40%, transparent);
+}
+@utility glow-magenta {
+  text-shadow: 0 0 8px var(--color-arcade-magenta),
+    0 0 20px color-mix(in srgb, var(--color-arcade-magenta) 40%, transparent);
 }

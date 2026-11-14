@@ -4,7 +4,11 @@ This file provides guidance to AI coding assistants when working with code in th
 
 ## Project
 
-Personal website built with [Eleventy (11ty)](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v3.
+Personal website built with [Eleventy (11ty)](https://www.11ty.dev/) v3 and [Tailwind CSS](https://tailwindcss.com/) v4.
+Requires Node 22.12 or newer (`engines` in `package.json`, enforced by `deploy.sh`; `@11ty/eleventy-img` 7,
+`concurrently` 10 and their dependencies need it).
+Visitors need Safari 16.4+, Chrome 111+, or Firefox 128+ (Tailwind 4 relies on `@property`, `color-mix()`, and
+cascade layers); older browsers lose styling.
 
 ## Commands
 
@@ -18,7 +22,9 @@ npm run deploy       # Clean, build, and rsync to remote server (requires deploy
 
 ## Deployment
 
-`npm run deploy` runs `deploy.sh`, which sources `deploy.env` for the remote host and path, then runs clean → build → rsync. `deploy.env` is gitignored; copy `deploy.env.example` and fill in your values:
+`npm run deploy` runs `deploy.sh`, which sources `deploy.env` for the remote host and path, then runs clean → build →
+rsync. It first refuses to run on a Node older than `engines.node` in `package.json`, so a failed deploy can't leave
+`_site` deleted. `deploy.env` is gitignored; copy `deploy.env.example` and fill in your values:
 
 ```bash
 DEPLOY_HOST=your-server-hostname
@@ -30,7 +36,8 @@ DEPLOY_PATH=/path/on/remote/server
 - `src/` — all source files (Eleventy input dir)
 - `src/_data/` — global data: `site.json`, `work.json`, `projects.json`
 - `src/_includes/layouts/` — Nunjucks layouts: `base.njk`, `post.njk`
-- `src/assets/css/main.css` — Tailwind source (committed)
+- `src/assets/css/main.css` — Tailwind source (committed); also holds the config (CSS-first: `@theme` palette and
+  fonts, `@plugin` typography, `@source` scan paths, `@utility` glow classes, the `prose-arcade` theme)
 - `src/assets/css/output.css` — Tailwind output (gitignored, generated)
 - `src/assets/fonts/` — self-hosted fonts (Press Start 2P, copied from `@fontsource/press-start-2p`)
 - `src/og-images.11ty.js` — generates 1200×630 PNG social cards; one per blog post (`assets/og/[slug].png`) plus `assets/og/default.png` for non-post pages. Uses `satori` + `sharp`. Font size scales (44→36→28px) based on title length.
@@ -53,12 +60,20 @@ DEPLOY_PATH=/path/on/remote/server
 
 ## CSS Pipeline
 
-Tailwind CLI processes `main.css` → `output.css`. Eleventy passthrough-copies
+The Tailwind CLI (`@tailwindcss/cli`) processes `main.css` → `output.css`. There is no `tailwind.config.js`; class
+scanning is limited to `src/` and `eleventy.config.mjs` via `@source`, so prose in AGENTS.md/README.md isn't
+scanned. Eleventy passthrough-copies
 `src/assets/` to `_site/assets/`. Run both together with `npm start`.
+
+Tailwind 4 puts utilities in a cascade layer, so unlayered CSS in `main.css` beats every utility. The footnote styles
+rely on that (they override `prose-a:text-arcade-green`, and have an explicit `:hover` rule because `prose-a:hover:`
+can't reach them); don't move them into `@layer components` without re-checking footnote color and spacing.
+`main.css` also redefines the `hover` variant as plain `:hover` (v4 limits it to hover-capable pointers), so taps on
+touch devices show hover states as they did in v3.
 
 ### Arcade color conventions
 
-The site uses a custom arcade/retro palette defined in `tailwind.config.js`:
+The site uses a custom arcade/retro palette defined in the `@theme` block of `main.css`:
 
 - `arcade-text` (`#c8c8dc`) — default body text; set on `<body>` in `base.njk`, do not repeat it on child elements
 - `arcade-dim` (`#8888aa`) — intentionally subdued elements only: inactive nav links, footer, secondary action links (e.g. `[PDF]`)
