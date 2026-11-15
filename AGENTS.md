@@ -94,6 +94,8 @@ The site uses a custom arcade/retro palette defined in the `@theme` block of `ma
 ## Adding content
 
 - **Blog post**: add a `.md` file in `src/blog/` with frontmatter `title`, `date`, `description`
+  - Links inside headings inherit the heading's weight and colour (set in `post.njk`), so they match the heading text
+    and still turn yellow on hover
   - Footnotes are supported via `markdown-it-footnote`: use `[^1]` inline and `[^1]: text` at the end
   - Abbreviations are supported via `markdown-it-abbr`: use `SomeAbbreviation` inline and `*[SomeAbbreviaton]: Expantion of the abbreviation` at the end
   - **Photo gallery**: use the `gallery` paired shortcode for thumbnail grids with PhotoSwipe lightbox:
